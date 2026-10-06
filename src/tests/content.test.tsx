@@ -140,6 +140,7 @@ describe('Experience & education', () => {
     const experience = within(section(container, 'experience'))
     expect(experience.getByText(/Ministère de l'Intérieur, Paris · 2025/)).toBeInTheDocument()
     expect(experience.getByText(/Stage support informatique/)).toBeInTheDocument()
+    expect(experience.getByText(fr.experience.internship.tasks)).toBeInTheDocument()
     expect(experience.getByText(/Aldi, SUPER’ette/)).toBeInTheDocument()
   })
 })

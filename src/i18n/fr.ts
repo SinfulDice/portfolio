@@ -64,12 +64,12 @@ export const fr = {
       portfolio: {
         title: 'Ce portfolio',
         description:
-          'Site statique bilingue (FR/EN) avec trois thèmes, construit avec React et TypeScript, testé automatiquement et publié sur GitHub Pages.',
+          "Site bilingue (FR/EN) avec trois thèmes, en React et TypeScript. Chaque règle de la spécification est vérifiée par des tests automatiques, et le site n'est publié que si tous les tests passent.",
       },
       medievalModernWarfare: {
         title: 'Medieval Modern Warfare',
         description:
-          "Jeu de stratégie en équipe façon « Worms », réalisé en une semaine en projet d'école. J'étais chef de projet et lead développeur.",
+          "Jeu de stratégie façon « Worms » créé en une semaine, en équipe de trois, pour un projet d'école. Chef de projet et lead développeur, j'ai réparti les tâches et écrit l'essentiel du code, avec l'aide de l'IA (Claude, Gemini). Le jeu a été testé par les élèves de l'école lors d'une démo publique, et le projet a obtenu 18/20.",
       },
     },
   },
@@ -87,6 +87,8 @@ export const fr = {
       title: 'Stage support informatique (2 semaines)',
       place: "Ministère de l'Intérieur, Paris",
       dates: '2025',
+      tasks:
+        "Installation de nouveaux écrans pour une vingtaine d'agents, et accompagnement des techniciens lors de leurs interventions auprès des utilisateurs.",
     },
     jobs: 'Jobs étudiants : Aldi, SUPER’ette, missions en intérim.',
   },

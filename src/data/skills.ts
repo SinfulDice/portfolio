@@ -29,8 +29,8 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   { id: 'frameworks', skills: [{ name: 'React' }, { name: 'PixiJS' }, { name: 'Matter.js' }] },
-  { id: 'databases', skills: [{ name: 'MySQL' }, { name: 'MongoDB' }] },
-  { id: 'tools', skills: [{ name: 'Git' }, { name: 'Docker' }, { name: 'Agile / Scrum' }] },
+  { id: 'databases', skills: [{ name: 'SQL (MySQL)' }, { name: 'NoSQL (MongoDB)' }] },
+  { id: 'tools', skills: [{ name: 'Git' }, { name: 'Docker' }, { name: 'Bash' }, { name: 'Agile / Scrum' }] },
   {
     id: 'system',
     skills: [{ name: 'Linux' }, { name: 'Windows' }, { name: 'Hyper-V' }, { name: 'VMware' }, { name: 'Zabbix' }],

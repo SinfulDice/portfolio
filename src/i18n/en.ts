@@ -66,12 +66,12 @@ export const en: Translations = {
       portfolio: {
         title: 'This portfolio',
         description:
-          'Bilingual (FR/EN) static website with three themes, built with React and TypeScript, automatically tested and published on GitHub Pages.',
+          'Bilingual (FR/EN) website with three themes, in React and TypeScript. Every rule of the specification is checked by automated tests, and the site is only published if all tests pass.',
       },
       medievalModernWarfare: {
         title: 'Medieval Modern Warfare',
         description:
-          'Team strategy game in the style of "Worms", built in one week as a school project. I was project lead and lead developer.',
+          '"Worms"-style strategy game built in one week by a team of three, for a school project. As project lead and lead developer, I split the tasks and wrote most of the code, with the help of AI (Claude, Gemini). The game was tested by the school\'s students during a public demo, and the project got 18/20.',
       },
     },
   },
@@ -89,6 +89,8 @@ export const en: Translations = {
       title: 'IT support internship (2 weeks)',
       place: 'French Ministry of the Interior, Paris',
       dates: '2025',
+      tasks:
+        'Installed new monitors for about twenty staff members, and shadowed the technicians during their support calls to users.',
     },
     jobs: 'Student jobs: Aldi, SUPER’ette, temp work.',
   },

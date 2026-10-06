@@ -39,3 +39,5 @@
   what he likes, what he expects from the alternance), new hobbies (MTG Commander, current books, D&D
   player → future DM). "Python for AI" became "AI with Python" (he already knows Python), incl. a
   translated skill badge. SPEC R18, R21, R22 updated; 46 tests pass.
+- Text review, part 2: skills SQL (MySQL), NoSQL (MongoDB), Bash; stronger project descriptions
+  (portfolio method; MMW: team of 3, lead, AI help, public demo, 18/20); internship tasks (R30).

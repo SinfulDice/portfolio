@@ -21,6 +21,7 @@ export function Experience() {
           <p className="muted">
             {internship.place} · {internship.dates}
           </p>
+          <p>{internship.tasks}</p>
           <p>{t.experience.jobs}</p>
         </div>
       </div>

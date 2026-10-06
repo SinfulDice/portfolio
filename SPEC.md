@@ -71,7 +71,8 @@ its number. **v1** = first published version. **Later** = after v1.
 
 ## 9. Experience & education
 - **R29** (v1): Education: Bachelor Développement Informatique, Sup de Vinci Bordeaux, 2024–2027.
-- **R30** (v1): Experience: IT support internship, Ministère de l'Intérieur, Paris, 2025 (2 weeks).
+- **R30** (v1): Experience: IT support internship, Ministère de l'Intérieur, Paris, 2025 (2 weeks), with
+  one line of concrete tasks (new monitors for ~20 staff, shadowing the technicians).
   Student jobs (Aldi, SUPER'ette, interim) grouped in one short line.
 - **R34** (v1, decided 2026-10-06): Under Education, one line mentions the school research report on
   IoT cybersecurity (Mirai, Stuxnet, Zero Trust). It is not a project card (no code to link).

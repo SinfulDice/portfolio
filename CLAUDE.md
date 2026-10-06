@@ -11,7 +11,7 @@ CV and applications, and shows the projects he builds (see "Projects to show").
 ## Profile (from his CV — keep the site consistent with it)
 - Pierre-Antoine SUT, student in 3rd year of **Bachelor Développement Informatique**, Sup de Vinci Bordeaux (2024–2027).
 - Location: Charente-Maritime / Bordeaux area, open to all of France.
-- Skills: Python, JavaScript, React, HTML/CSS, Java, C#, MySQL, MongoDB, Git, Docker, Agile/Scrum;
+- Skills: Python, JavaScript, React, HTML/CSS, Java, C#, SQL (MySQL), NoSQL (MongoDB), Git, Bash, Docker, Agile/Scrum;
   system & network (Linux, Windows, Hyper-V, VMware, Zabbix); AI-assisted dev (Claude), local LLMs (Ollama).
   Currently learning **Rust, Go, TypeScript** and Python for AI.
 - Experience: IT support internship at the Ministère de l'Intérieur (Paris, 2025, 2 weeks); student jobs
