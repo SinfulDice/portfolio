@@ -41,3 +41,6 @@
   translated skill badge. SPEC R18, R21, R22 updated; 46 tests pass.
 - Text review, part 2: skills SQL (MySQL), NoSQL (MongoDB), Bash; stronger project descriptions
   (portfolio method; MMW: team of 3, lead, AI help, public demo, 18/20); internship tasks (R30).
+- Text review finished (Contact text kept as is) and pushed; the site is live with all reviewed texts.
+- Next ideas: Worms-like screenshots, add the rock-paper-scissors AI and calendar projects when on
+  GitHub, full fantasy design (R17, R24).
