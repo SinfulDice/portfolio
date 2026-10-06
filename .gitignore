@@ -26,3 +26,6 @@ dist-ssr
 # Secrets
 .env
 .env.*
+
+# Full-size original photos (too big for the site and the repo; src/assets/photo.jpg is the web copy)
+src/assets/DSC_*

@@ -1,13 +1,12 @@
+import photo from '../assets/photo.jpg'
 import { useSettings } from '../settings/context'
 
 export function Home() {
   const { t } = useSettings()
   return (
     <section id="home" className="section home">
-      {/* R20: placeholder until the real photo is provided (then: <img src=… alt=…>). */}
-      <div className="photo photo-placeholder" role="img" aria-label={t.home.photoAlt}>
-        <span aria-hidden="true">PA</span>
-      </div>
+      {/* R20: the photo always has alternative text. */}
+      <img className="photo" src={photo} alt={t.home.photoAlt} width={220} height={220} />
       <div className="home-text">
         <p className="greeting">{t.home.greeting}</p>
         <h1>Pierre-Antoine Sut</h1>

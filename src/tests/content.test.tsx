@@ -134,3 +134,12 @@ describe('Experience & education', () => {
     expect(experience.getByText(/Aldi, SUPER’ette/)).toBeInTheDocument()
   })
 })
+
+describe('Photo', () => {
+  it('R20: the real photo is shown (not a placeholder), with alternative text', () => {
+    const { container } = renderApp()
+    const photo = within(section(container, 'home')).getByRole('img', { name: fr.home.photoAlt })
+    expect(photo.tagName).toBe('IMG')
+    expect(photo.getAttribute('src')).toMatch(/photo.*\.jpg$/)
+  })
+})

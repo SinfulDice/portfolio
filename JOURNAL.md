@@ -31,3 +31,6 @@
   publish them (public repo).
 - Installed `gh` (GitHub CLI) and logged in; created the public repo `SinfulDice/portfolio`,
   set Pages to "GitHub Actions", and pushed.
+- Updated the GitHub Actions versions (old ones gave "Node.js 20 is deprecated" warnings).
+- He added his photo: made a web copy `src/assets/photo.jpg` (cropped square, 480×480, 18 KB instead
+  of 14 MB) and used it in the Home section (R20 test updated). The full-size original is git-ignored.

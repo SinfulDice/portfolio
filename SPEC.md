@@ -44,7 +44,7 @@ its number. **v1** = first published version. **Later** = after v1.
 - **R18** (v1): Shows Pierre-Antoine's photo, his name, a one-line title (e.g. "Développeur Full Stack &
   Data/IA — en recherche d'alternance"), and the work-study rhythm (2 weeks company / 2 weeks school).
 - **R19** (v1): A "Voir mes projets" / "See my projects" button scrolls to the Projects section.
-- **R20** (v1): The photo has alternative text (alt). Until the real photo is provided, a placeholder is shown.
+- **R20** (v1): The photo (`src/assets/photo.jpg`, web-sized copy: 480×480) has alternative text (alt).
 
 ## 6. About me
 - **R21** (v1): A short presentation, his hobbies (reading, Dungeons & Dragons, films/series) and his
@@ -80,8 +80,8 @@ its number. **v1** = first published version. **Later** = after v1.
 - **R33** (v1): Before each deployment, the workflow runs lint, tests and build; if one fails, nothing is published.
 
 ## Later (not v1)
-- Real photo, Worms-like screenshots, longer "About me", detailed fantasy design (R17) with the
+- Worms-like screenshots, longer "About me", detailed fantasy design (R17) with the
   character-sheet skills (R24), downloadable CV.
 
 ## Open questions
-- Real photo: he will add it later (placeholder until then).
+- None for now.

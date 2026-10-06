@@ -323,16 +323,6 @@ main {
   object-fit: cover;
 }
 
-.photo-placeholder {
-  display: grid;
-  place-items: center;
-  background: var(--surface);
-  font-family: var(--font-heading);
-  font-size: 4rem;
-  font-weight: 800;
-  color: var(--accent);
-}
-
 .greeting {
   margin: 0;
   color: var(--accent-2);

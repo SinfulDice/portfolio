@@ -46,7 +46,7 @@ Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exi
 
 ## Status (2026-10-06)
 - v1 built: all sections, FR/EN, 3 themes (fantasy kept simple), tests passing.
-- To do: his real photo (in `src/assets/`), he rereads all texts, Worms-like screenshots,
+- To do: he rereads all texts, Worms-like screenshots,
   longer "About me", full fantasy design (R17, R24).
 
 ## Working with him
