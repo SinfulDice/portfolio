@@ -1,0 +1,46 @@
+# Publishes the site on GitHub Pages at every push to main (R1).
+# If lint, tests or build fail, the deploy job doesn't run and nothing is published (R33).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # also allows starting it by hand from the "Actions" tab
+
+# Rights needed to publish on GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci # installs exactly the versions written in package-lock.json
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: check-and-build # runs only if every step above succeeded
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

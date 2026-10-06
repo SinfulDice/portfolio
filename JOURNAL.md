@@ -26,3 +26,4 @@
 - Deleted the unused Vite demo files.
 - Added R34: the IoT cybersecurity report is one line under Education (not a project card). 43 tests pass.
 - First git commit.
+- Added the GitHub Pages workflow (`.github/workflows/deploy.yml`) + its tests (R1, R33), and a real README.

@@ -1,32 +1,39 @@
-# React + TypeScript + Vite
+# Portfolio — Pierre-Antoine Sut
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+🌐 **https://sinfuldice.github.io/portfolio/**
 
-Currently, two official plugins are available:
+🇫🇷 Mon portfolio : développeur Full Stack & Data / IA, en recherche d'alternance (12 à 24 mois).
+Site bilingue (français / anglais) avec trois thèmes : sombre, clair et fantasy.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🇬🇧 My portfolio: Full Stack & Data / AI developer, looking for a work-study contract (12 to 24 months).
+Bilingual website (French / English) with three themes: dark, light and fantasy.
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19 + TypeScript**, built with **Vite**: a static site, no backend.
+- **Vitest + Testing Library**: every rule of the specification ([SPEC.md](SPEC.md)) has automated
+  tests named after it (e.g. `R13: a first visit uses the dark theme`).
+- **GitHub Actions**: at each push, lint + tests + build run, then the site is published on
+  GitHub Pages ([deploy.yml](.github/workflows/deploy.yml)).
 
-## Expanding the Oxlint configuration
+## Run it locally
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Requires Node.js 24.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev      # development server
+npm test         # run the tests
+npm run build    # build the site into dist/
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Project structure
+
+```
+src/
+  i18n/        texts in French (fr.ts) and English (en.ts)
+  data/        skills, projects, contact links
+  components/  navigation bar and page sections
+  settings/    language and theme (remembered in the browser)
+  tests/       tests, one or more per rule of SPEC.md
+```
