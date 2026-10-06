@@ -45,9 +45,12 @@ Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exi
 - Pushing to `main` publishes the site (`.github/workflows/deploy.yml`).
 
 ## Status (2026-10-06)
-- v1 built: all sections, FR/EN, 3 themes (fantasy kept simple), tests passing.
-- To do: he rereads all texts, Worms-like screenshots,
-  full fantasy design (R17, R24).
+- v1 is **live** at https://sinfuldice.github.io/portfolio/ (repo: github.com/SinfulDice/portfolio):
+  all sections, FR/EN, 3 themes (fantasy kept simple), his photo, texts reviewed with him, checked
+  on his phone. 46 tests pass. He is happy with it "for now".
+- Possible next steps (his choice): Worms-like screenshots; add the rock-paper-scissors AI and the
+  calendar app when they are on GitHub; full fantasy design (R17, R24); downloadable CV (later).
+- `gh` (GitHub CLI) is installed and logged in as SinfulDice.
 
 ## Working with him
 - He is learning: **explain simply each step** — what you do, why, and what new tools/files are for.
