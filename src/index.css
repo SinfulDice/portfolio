@@ -1,0 +1,457 @@
+/* ===== Themes =====
+   Each theme is a set of colors (CSS variables). <html data-theme="…"> picks the theme.
+   R16: text colors must keep a contrast of at least 4.5:1 with backgrounds
+   (checked by src/tests/theme.test.tsx), and --font-body is the same in every theme. */
+
+:root,
+[data-theme='dark'] {
+  --bg: #14121f;
+  --surface: #211d33;
+  --text: #ece8f5;
+  --muted: #b8b0cf;
+  --accent: #ff8a65;
+  --on-accent: #14121f;
+  --accent-2: #7ee0c3;
+  --accent-3: #ffd166;
+  --border: #3a3354;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --text: #1d1a2b;
+  --muted: #57506b;
+  --accent: #c2410c;
+  --on-accent: #ffffff;
+  --accent-2: #0f766e;
+  --accent-3: #b45309;
+  --border: #e4ddd0;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light;
+}
+
+/* v1 fantasy = parchment colors + medieval heading font. Full design later (R17). */
+[data-theme='fantasy'] {
+  --bg: #f1e4c3;
+  --surface: #f8efd6;
+  --text: #2b1d0e;
+  --muted: #5c4630;
+  --accent: #8b1e1e;
+  --on-accent: #f8efd6;
+  --accent-2: #2f5d3a;
+  --accent-3: #8a6d1d;
+  --border: #c9b27c;
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Cinzel', Georgia, serif;
+  color-scheme: light;
+}
+
+/* ===== Base ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* R4: smooth scrolling to sections */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ===== Navigation bar (R4, R5) ===== */
+
+.navbar {
+  position: sticky; /* stays at the top while scrolling */
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar nav {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.navbar-brand span {
+  color: var(--accent);
+}
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-links a {
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background: var(--surface);
+  color: var(--accent);
+}
+
+.switches {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.switch {
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.switch button {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+}
+
+.switch button[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.menu-button {
+  display: none;
+  margin-left: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.3rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  cursor: pointer;
+}
+
+/* R5: on narrow screens, the menu hides behind the ☰ button */
+@media (max-width: 767px) {
+  .menu-button {
+    display: block;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 0.75rem;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .switches {
+    justify-content: center;
+  }
+}
+
+/* ===== Sections ===== */
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+  scroll-margin-top: 3.5rem; /* so the sticky bar doesn't hide section titles */
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: 0.4rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-3), var(--accent-2));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.item-title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.item-title + .muted {
+  margin-top: 0.2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* Home */
+
+.home {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  min-height: calc(100vh - 4rem);
+  padding-top: 2rem;
+}
+
+.photo {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 6px solid var(--accent);
+  box-shadow: 12px 12px 0 var(--accent-2);
+  object-fit: cover;
+}
+
+.photo-placeholder {
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.greeting {
+  margin: 0;
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+.home h1 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  margin: 0.2rem 0;
+}
+
+.home-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.home .button {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .photo {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* Skills (R23) */
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.badges {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 0.95rem;
+}
+
+.badge.learning {
+  border-style: dashed;
+  border-color: var(--accent-2);
+}
+
+.learning-tag {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Projects (R26) */
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project h3,
+.project p {
+  margin: 0;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-image.placeholder {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-3));
+  color: var(--on-accent);
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
