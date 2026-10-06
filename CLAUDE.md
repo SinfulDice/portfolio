@@ -32,22 +32,22 @@ CV and applications, and shows the projects he builds (see "Projects to show").
   (Vite needs `base: '/portfolio/'`). Deployed automatically by a GitHub Actions workflow.
 
 ## Projects to show
-Built the week of 2026-10-05; add each to the site when it exists on GitHub:
-1. This portfolio.
-2. **Rock-paper-scissors with a hand-sign AI** — model trained in Python, runs in the browser (live demo).
-3. **Calendar app** — Go backend + SQLite, React + TS frontend.
-Plus the school "Worms-like" game (ask him if its code is on GitHub).
+Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exists on GitHub:
+1. This portfolio — on the site.
+2. **Medieval Modern Warfare** (school "Worms-like" game, code only) — on the site.
+3. **Rock-paper-scissors with a hand-sign AI** — model trained in Python, runs in the browser (live demo).
+4. **Calendar app** — Go backend + SQLite, React + TS frontend.
 
-## Next: questions + SPEC.md + tests
-Follow the "Starting a new project" process from ~/my-projects/CLAUDE.md: the decisions above are only a
-start — ask him the remaining questions (sections of the site, content, design, FR/EN behavior…), then
-write `SPEC.md` and tests for each rule (e.g. Vitest + React Testing Library) before building.
+## How the project works
+- `SPEC.md` holds the agreed rules (R1, R2…). Each rule has tests named after it in `src/tests/`.
+  Never change an agreed rule without asking him; new decisions go into SPEC.md, then tests, then code.
+- Run `npm test`, `npm run lint` and `npm run build` before each commit.
+- Pushing to `main` publishes the site (`.github/workflows/deploy.yml`).
 
-## Setup status
-- Folder created, `git init` done (branch `main`).
-- Node.js v24 (LTS) installed with nvm; git name/email set (global).
-- Vite project created (React 19 + TS, Vite 8, oxlint for linting; `base: '/portfolio/'` set).
-- Not done yet: content, design, GitHub repo, deployment.
+## Status (2026-10-06)
+- v1 built: all sections, FR/EN, 3 themes (fantasy kept simple), tests passing.
+- To do: his real photo (in `src/assets/`), he rereads all texts, Worms-like screenshots,
+  longer "About me", full fantasy design (R17, R24).
 
 ## Working with him
 - He is learning: **explain simply each step** — what you do, why, and what new tools/files are for.

@@ -27,3 +27,7 @@
 - Added R34: the IoT cybersecurity report is one line under Education (not a project card). 43 tests pass.
 - First git commit.
 - Added the GitHub Pages workflow (`.github/workflows/deploy.yml`) + its tests (R1, R33), and a real README.
+- Updated the outdated parts of `CLAUDE.md`. He reread `CLAUDE.md` and `JOURNAL.md` and agreed to
+  publish them (public repo).
+- Installed `gh` (GitHub CLI) and logged in; created the public repo `SinfulDice/portfolio`,
+  set Pages to "GitHub Actions", and pushed.
