@@ -21,6 +21,7 @@ export const en: Translations = {
   home: {
     greeting: "Hi, I'm",
     title: 'Full Stack & Data / AI Developer',
+    hook: "I love finding out how things work: that's why I'm passionate about development.",
     search: 'Looking for a 12 to 24-month work-study contract (alternance), starting now, anywhere in France.',
     rhythm: 'Schedule: 2 weeks at the company / 2 weeks at school.',
     cta: 'See my projects',
@@ -29,17 +30,24 @@ export const en: Translations = {
   about: {
     title: 'About me',
     intro: [
-      "I'm a 3rd-year student in a Bachelor's degree in Software Development at Sup de Vinci Bordeaux. I love building applications end to end, from the server to the interface.",
-      "I'm especially interested in data and AI: I run LLMs locally (Ollama) and develop with AI assistance (Claude). Right now I'm learning Rust, Go, TypeScript and Python for AI.",
+      "It all started with Scratch and YouTube videos. Today, I'm a 3rd-year student in a Bachelor's degree in Software Development at Sup de Vinci Bordeaux.",
+      "I enjoy every stage of a project, with a soft spot for the server side and for AI. To me, AI is a tool that expands what I can create: I run LLMs locally (Ollama) and develop with the help of Claude. Right now, I'm learning Rust, Go, TypeScript, and AI with Python.",
+      "What I'm looking for in a work-study position: working in a team on a real product, with real-world constraints (code review, tests, deployment).",
     ],
     hobbiesTitle: 'Interests',
-    hobbies: ['Reading', 'Dungeons & Dragons', 'Films and series'],
+    hobbies: [
+      'Reading: currently Six of Crows and the Grisha series by Leigh Bardugo',
+      'Dungeons & Dragons: player, and future Dungeon Master',
+      'Magic: The Gathering, Commander format',
+      'Films and series',
+    ],
     languagesTitle: 'Languages',
     spokenLanguages: ['French (native)', 'English (B2)', 'German (A1)'],
   },
   skills: {
     title: 'Skills',
     learning: 'learning',
+    aiWithPython: 'AI with Python',
     groups: {
       languages: 'Languages',
       frameworks: 'Frameworks & libraries',

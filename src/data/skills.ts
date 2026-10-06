@@ -3,7 +3,8 @@ import type { Translations } from '../i18n/fr'
 // One list of skills, used by every theme (R22). No levels or percentages (R25).
 
 export type Skill = {
-  name: string
+  /** A tech name (same in both languages), or the key of a translated name in t.skills. */
+  name: string | { text: 'aiWithPython' }
   /** True for skills he is currently learning (shown with a "learning" tag). */
   learning?: boolean
 }
@@ -36,6 +37,6 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     id: 'ai',
-    skills: [{ name: 'Claude' }, { name: 'Ollama' }, { name: 'Python (IA / AI)', learning: true }],
+    skills: [{ name: 'Claude' }, { name: 'Ollama' }, { name: { text: 'aiWithPython' }, learning: true }],
   },
 ]

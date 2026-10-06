@@ -340,6 +340,11 @@ main {
   margin-top: 0;
 }
 
+.hook {
+  font-style: italic;
+  color: var(--muted);
+}
+
 .home .button {
   margin-top: 0.75rem;
 }

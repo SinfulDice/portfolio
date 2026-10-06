@@ -19,6 +19,7 @@ export const fr = {
   home: {
     greeting: 'Bonjour, je suis',
     title: 'Développeur Full Stack & Data / IA',
+    hook: "J'adore découvrir comment les choses fonctionnent : c'est pour ça que le développement me passionne.",
     search: "En recherche d'alternance de 12 à 24 mois, dès maintenant, partout en France.",
     rhythm: 'Rythme : 2 semaines en entreprise / 2 semaines en école.',
     cta: 'Voir mes projets',
@@ -27,17 +28,24 @@ export const fr = {
   about: {
     title: 'À propos',
     intro: [
-      "Étudiant en 3e année de Bachelor Développement Informatique à Sup de Vinci Bordeaux, j'aime construire des applications de A à Z, du serveur à l'interface.",
-      "Je m'intéresse particulièrement à la data et à l'IA : j'utilise des LLM en local (Ollama) et je développe avec l'aide de l'IA (Claude). En ce moment, j'apprends Rust, Go, TypeScript et Python pour l'IA.",
+      "Tout a commencé avec Scratch et des vidéos YouTube. Aujourd'hui, je suis en 3e année de Bachelor Développement Informatique à Sup de Vinci Bordeaux.",
+      "J'aime toutes les étapes d'un projet, avec un faible pour la partie serveur et pour l'IA. Pour moi, l'IA est un outil qui élargit mes possibilités de création : j'utilise des LLM en local (Ollama) et je développe avec l'aide de Claude. En ce moment, j'apprends Rust, Go, TypeScript et l'IA avec Python.",
+      "Ce que j'attends de l'alternance : travailler en équipe sur un vrai produit, avec ses contraintes (relecture de code, tests, mise en production).",
     ],
     hobbiesTitle: "Centres d'intérêt",
-    hobbies: ['Lecture', 'Donjons & Dragons', 'Films et séries'],
+    hobbies: [
+      'Lecture : en ce moment, Six of Crows et la saga Grisha de Leigh Bardugo',
+      'Donjons & Dragons : joueur, et futur maître du jeu',
+      'Magic: The Gathering, en format Commander',
+      'Films et séries',
+    ],
     languagesTitle: 'Langues',
     spokenLanguages: ['Français (langue maternelle)', 'Anglais (B2)', 'Allemand (A1)'],
   },
   skills: {
     title: 'Compétences',
     learning: 'en apprentissage',
+    aiWithPython: 'IA avec Python',
     groups: {
       languages: 'Langages',
       frameworks: 'Frameworks & bibliothèques',

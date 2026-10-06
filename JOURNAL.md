@@ -34,3 +34,8 @@
 - Updated the GitHub Actions versions (old ones gave "Node.js 20 is deprecated" warnings).
 - He added his photo: made a web copy `src/assets/photo.jpg` (cropped square, 480×480, 18 KB instead
   of 14 MB) and used it in the Home section (R20 test updated). The full-size original is git-ignored.
+- He checked the site on his phone: OK (R31).
+- Text review, part 1 (Home + About): added his hook sentence on Home, rewrote About (how he started,
+  what he likes, what he expects from the alternance), new hobbies (MTG Commander, current books, D&D
+  player → future DM). "Python for AI" became "AI with Python" (he already knows Python), incl. a
+  translated skill badge. SPEC R18, R21, R22 updated; 46 tests pass.

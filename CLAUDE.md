@@ -47,7 +47,7 @@ Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exi
 ## Status (2026-10-06)
 - v1 built: all sections, FR/EN, 3 themes (fantasy kept simple), tests passing.
 - To do: he rereads all texts, Worms-like screenshots,
-  longer "About me", full fantasy design (R17, R24).
+  full fantasy design (R17, R24).
 
 ## Working with him
 - He is learning: **explain simply each step** — what you do, why, and what new tools/files are for.

@@ -42,18 +42,20 @@ its number. **v1** = first published version. **Later** = after v1.
 
 ## 5. Home (intro)
 - **R18** (v1): Shows Pierre-Antoine's photo, his name, a one-line title (e.g. "Développeur Full Stack &
-  Data/IA — en recherche d'alternance"), and the work-study rhythm (2 weeks company / 2 weeks school).
+  Data/IA — en recherche d'alternance"), a one-sentence hook in his own words,
+  and the work-study rhythm (2 weeks company / 2 weeks school).
 - **R19** (v1): A "Voir mes projets" / "See my projects" button scrolls to the Projects section.
 - **R20** (v1): The photo (`src/assets/photo.jpg`, web-sized copy: 480×480) has alternative text (alt).
 
 ## 6. About me
-- **R21** (v1): A short presentation, his hobbies (reading, Dungeons & Dragons, films/series) and his
-  languages (French native, English B2, German A1). **Content to expand later** (questions pending).
+- **R21** (v1): A short presentation (how he started, what he likes, what he expects from the
+  alternance), his hobbies (reading, Dungeons & Dragons, Magic: The Gathering, films/series) and his
+  languages (French native, English B2, German A1).
 
 ## 7. Skills
 - **R22** (v1): Skills come from one data list, grouped (groups: Languages, Frameworks &
   libraries, Databases, Tools & methods, System & network, AI). Skills he is learning (Rust, Go,
-  TypeScript, Python for AI) are marked "en apprentissage" / "learning".
+  TypeScript, AI with Python — he already knows Python itself) are marked "en apprentissage" / "learning".
 - **R23** (v1): Skills are shown as badges, by group (in v1: in every theme).
 - **R24** (later): In the fantasy theme, the same skills are shown as a D&D-style character sheet.
 - **R25** (v1): No percentages, levels or progress bars for skills, in any theme.
@@ -80,7 +82,7 @@ its number. **v1** = first published version. **Later** = after v1.
 - **R33** (v1): Before each deployment, the workflow runs lint, tests and build; if one fails, nothing is published.
 
 ## Later (not v1)
-- Worms-like screenshots, longer "About me", detailed fantasy design (R17) with the
+- Worms-like screenshots, detailed fantasy design (R17) with the
   character-sheet skills (R24), downloadable CV.
 
 ## Open questions

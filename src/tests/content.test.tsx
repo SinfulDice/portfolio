@@ -1,9 +1,14 @@
 import { screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { projects } from '../data/projects'
-import { skillGroups } from '../data/skills'
+import { skillGroups, type Skill } from '../data/skills'
 import { fr } from '../i18n/fr'
 import { renderApp } from '../test/renderApp'
+
+// The displayed (French) name of a skill.
+function skillName(skill: Skill): string {
+  return typeof skill.name === 'string' ? skill.name : fr.skills[skill.name.text]
+}
 
 function section(container: HTMLElement, id: string): HTMLElement {
   return container.querySelector(`#${id}`) as HTMLElement
@@ -16,6 +21,7 @@ describe('Home', () => {
     expect(home.getByRole('img', { name: fr.home.photoAlt })).toBeInTheDocument()
     expect(home.getByRole('heading', { level: 1, name: 'Pierre-Antoine Sut' })).toBeInTheDocument()
     expect(home.getByText(fr.home.title)).toBeInTheDocument()
+    expect(home.getByText(fr.home.hook)).toBeInTheDocument()
     expect(home.getByText(/2 semaines en entreprise \/ 2 semaines en école/)).toBeInTheDocument()
   })
 
@@ -48,7 +54,7 @@ describe('Skills', () => {
     for (const group of skillGroups) {
       const box = skills.getByRole('group', { name: fr.skills.groups[group.id] })
       for (const skill of group.skills) {
-        expect(within(box).getByText(skill.name)).toBeInTheDocument()
+        expect(within(box).getByText(skillName(skill))).toBeInTheDocument()
       }
     }
   })
@@ -57,13 +63,16 @@ describe('Skills', () => {
     const { container } = renderApp()
     const skills = within(section(container, 'skills'))
     for (const skill of skillGroups.flatMap((group) => group.skills)) {
-      const badge = skills.getByText(skill.name).closest('li')!
+      const badge = skills.getByText(skillName(skill)).closest('li')!
       if (skill.learning) expect(badge).toHaveTextContent(fr.skills.learning)
       else expect(badge).not.toHaveTextContent(fr.skills.learning)
     }
-    for (const name of ['Rust', 'Go', 'TypeScript']) {
-      expect(skillGroups.flatMap((g) => g.skills).find((s) => s.name === name)?.learning).toBe(true)
+    const all = skillGroups.flatMap((g) => g.skills)
+    for (const name of ['Rust', 'Go', 'TypeScript', fr.skills.aiWithPython]) {
+      expect(all.find((s) => skillName(s) === name)?.learning, name).toBe(true)
     }
+    // He already knows Python: only "AI with Python" is being learned.
+    expect(all.find((s) => s.name === 'Python')?.learning).toBeFalsy()
   })
 
   it('R25: no percentages, levels or progress bars, in any theme', async () => {

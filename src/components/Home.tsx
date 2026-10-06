@@ -11,6 +11,7 @@ export function Home() {
         <p className="greeting">{t.home.greeting}</p>
         <h1>Pierre-Antoine Sut</h1>
         <p className="home-title">{t.home.title}</p>
+        <p className="hook">{t.home.hook}</p>
         <p>{t.home.search}</p>
         <p>{t.home.rhythm}</p>
         <a className="button" href="#projects">

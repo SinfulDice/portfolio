@@ -12,12 +12,15 @@ export function Skills() {
           <div key={group.id} className="card" role="group" aria-labelledby={`skills-${group.id}`}>
             <h3 id={`skills-${group.id}`}>{t.skills.groups[group.id]}</h3>
             <ul className="badges">
-              {group.skills.map((skill) => (
-                <li key={skill.name} className={skill.learning ? 'badge learning' : 'badge'}>
-                  {skill.name}
-                  {skill.learning && <span className="learning-tag"> · {t.skills.learning}</span>}
-                </li>
-              ))}
+              {group.skills.map((skill) => {
+                const name = typeof skill.name === 'string' ? skill.name : t.skills[skill.name.text]
+                return (
+                  <li key={name} className={skill.learning ? 'badge learning' : 'badge'}>
+                    {name}
+                    {skill.learning && <span className="learning-tag"> · {t.skills.learning}</span>}
+                  </li>
+                )
+              })}
             </ul>
           </div>
         ))}
