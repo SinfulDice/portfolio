@@ -61,6 +61,11 @@ export const fr = {
     demo: 'Voir la démo',
     techLabel: 'Technologies',
     items: {
+      rockPaperScissors: {
+        title: 'Pierre-feuille-ciseaux avec IA',
+        description:
+          "Jouez à pierre-feuille-ciseaux contre l'ordinateur en montrant votre main à la webcam. J'ai enregistré mes propres données (660 exemples) et entraîné en Python (PyTorch) un petit réseau de neurones qui reconnaît le signe avec 99,2 % de précision sur les données de test. Le modèle tourne directement dans le navigateur : la vidéo ne quitte jamais l'ordinateur. Développé avec l'aide de Claude Code. Limite : entraîné uniquement sur ma main, pour l'instant. Démo sur ordinateur (Chrome ou Firefox), avec une webcam.",
+      },
       portfolio: {
         title: 'Ce portfolio',
         description:

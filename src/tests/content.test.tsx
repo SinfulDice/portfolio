@@ -2,6 +2,7 @@ import { screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { projects } from '../data/projects'
 import { skillGroups, type Skill } from '../data/skills'
+import { en } from '../i18n/en'
 import { fr } from '../i18n/fr'
 import { renderApp } from '../test/renderApp'
 
@@ -112,8 +113,33 @@ describe('Projects', () => {
     }
   })
 
-  it('R28: shows this portfolio and Medieval Modern Warfare (code only, no demo)', () => {
-    expect(projects.map((p) => p.id)).toEqual(['portfolio', 'medievalModernWarfare'])
+  it('R28: shows rock-paper-scissors, this portfolio and Medieval Modern Warfare, in this order', () => {
+    expect(projects.map((p) => p.id)).toEqual(['rockPaperScissors', 'portfolio', 'medievalModernWarfare'])
+  })
+
+  it('R28: rock-paper-scissors links to its code and its live demo', () => {
+    const rps = projects.find((p) => p.id === 'rockPaperScissors')!
+    expect(rps.repo).toBe('https://github.com/SinfulDice/rock-paper-scissors')
+    expect(rps.demo).toBe('https://sinfuldice.github.io/rock-paper-scissors/')
+  })
+
+  it('R28: the rock-paper-scissors card shows its screenshot, not the placeholder', () => {
+    renderApp()
+    const title = fr.projects.items.rockPaperScissors.title
+    const card = within(screen.getByRole('article', { name: title }))
+    const image = card.getByRole('img', { name: title })
+    expect(image.tagName).toBe('IMG')
+    expect(image.getAttribute('src')).toMatch(/rock-paper-scissors.*\.webp/)
+  })
+
+  it('R28: the rock-paper-scissors description mentions Claude Code and its limit, in both languages', () => {
+    expect(fr.projects.items.rockPaperScissors.description).toMatch(/Claude Code/)
+    expect(fr.projects.items.rockPaperScissors.description).toMatch(/uniquement sur ma main/)
+    expect(en.projects.items.rockPaperScissors.description).toMatch(/Claude Code/)
+    expect(en.projects.items.rockPaperScissors.description).toMatch(/on my hand only/)
+  })
+
+  it('R28: Medieval Modern Warfare is code only (no demo)', () => {
     const mmw = projects.find((p) => p.id === 'medievalModernWarfare')!
     expect(mmw.repo).toBe('https://github.com/SinfulDice/MedievalModernWarfare')
     expect(mmw.demo).toBeUndefined()

@@ -64,10 +64,15 @@ its number. **v1** = first published version. **Later** = after v1.
 - **R26** (v1): Each project card shows: title, short description (FR/EN), technologies used, GitHub
   link, a demo link **only if a demo exists**, and an image (placeholder if none yet).
 - **R27** (v1): Links to other sites open in a new tab, safely (`rel="noopener noreferrer"`).
-- **R28** (v1): Projects shown: this portfolio; **Medieval Modern Warfare** (school "Worms-like" game,
-  team project in 1 week, he was project lead + lead dev, React/PixiJS/Matter.js, code only:
-  https://github.com/SinfulDice/MedievalModernWarfare). The rock-paper-scissors AI and the calendar
-  app are added once they are on GitHub.
+- **R28** (v1, updated 2026-10-19): Projects shown, in this order: **Rock-paper-scissors AI** (hand signs
+  recognized by his own model trained in Python, runs in the browser; code:
+  https://github.com/SinfulDice/rock-paper-scissors, live demo:
+  https://sinfuldice.github.io/rock-paper-scissors/; the description mentions that it was built with
+  Claude Code's help and its limit: trained on his hand only; its image is a screenshot of a won
+  match, cropped to 16:9, `src/assets/projects/rock-paper-scissors.webp`); this portfolio; **Medieval Modern Warfare**
+  (school "Worms-like" game, team project in 1 week, he was project lead + lead dev,
+  React/PixiJS/Matter.js, code only: https://github.com/SinfulDice/MedievalModernWarfare).
+  The calendar app is added once it is on GitHub.
 
 ## 9. Experience & education
 - **R29** (v1): Education: Bachelor Développement Informatique, Sup de Vinci Bordeaux, 2024–2027.

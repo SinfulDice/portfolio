@@ -44,3 +44,11 @@
 - Text review finished (Contact text kept as is) and pushed; the site is live with all reviewed texts.
 - Next ideas: Worms-like screenshots, add the rock-paper-scissors AI and calendar projects when on
   GitHub, full fantasy design (R17, R24).
+
+## 2026-10-19
+- Code tour, steps 1–2 of 8 (big picture + startup files; components, props, lists, conditions).
+  Paused at his request to work on the site; resume at step 3 when he asks (see CLAUDE.md).
+- Added the rock-paper-scissors AI project (R28 updated): first card, FR/EN texts (mention Claude Code
+  and the limit "trained on my hand only"), badges, code + live demo links. His screenshot of a won match,
+  cropped to 16:9 and shrunk to an 800×450 WebP (23 KB instead of 434 KB PNG); originals git-ignored.
+  50 tests pass (new R28 tests: order, links, description, screenshot). He checked it locally: OK.

@@ -32,10 +32,14 @@ CV and applications, and shows the projects he builds (see "Projects to show").
   (Vite needs `base: '/portfolio/'`). Deployed automatically by a GitHub Actions workflow.
 
 ## Projects to show
-Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exists on GitHub:
+Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exists on GitHub.
+Other project sessions leave a **"Ready to add"** note below when a project's v1 is deployed.
+**At the start of each session, check for these notes and offer to add those projects to the site**
+(then remove the note once the project is on the site). Projects:
 1. This portfolio — on the site.
 2. **Medieval Modern Warfare** (school "Worms-like" game, code only) — on the site.
 3. **Rock-paper-scissors with a hand-sign AI** — model trained in Python, runs in the browser (live demo).
+   On the site since 2026-10-19 (first card, screenshot of a won match). Source of truth: that repo's README.md.
 4. **Calendar app** — Go backend + SQLite, React + TS frontend.
 
 ## How the project works
@@ -44,13 +48,22 @@ Add each to the site (`src/data/projects.ts` + texts in `src/i18n/`) when it exi
 - Run `npm test`, `npm run lint` and `npm run build` before each commit.
 - Pushing to `main` publishes the site (`.github/workflows/deploy.yml`).
 
-## Status (2026-10-06)
+## Status (2026-10-19)
 - v1 is **live** at https://sinfuldice.github.io/portfolio/ (repo: github.com/SinfulDice/portfolio):
   all sections, FR/EN, 3 themes (fantasy kept simple), his photo, texts reviewed with him, checked
-  on his phone. 46 tests pass. He is happy with it "for now".
-- Possible next steps (his choice): Worms-like screenshots; add the rock-paper-scissors AI and the
-  calendar app when they are on GitHub; full fantasy design (R17, R24); downloadable CV (later).
+  on his phone. He is happy with it "for now".
+- 2026-10-19: added the rock-paper-scissors AI project (first card, with demo link + screenshot). 50 tests pass.
+- Possible next steps (his choice): Worms-like screenshots (go in `src/assets/projects/`, as 16:9 WebP);
+  add the calendar app when it is on GitHub; full fantasy design (R17, R24); downloadable CV (later).
+- Original screenshots dropped at the project root are git-ignored (`/*.png`).
 - `gh` (GitHub CLI) is installed and logged in as SinfulDice.
+
+## Code tour (paused 2026-10-19)
+Guided tour of the code, 8 steps: 1 big picture + startup (index.html, main.tsx, App.tsx, sections.ts),
+2 components (Home, props/ExternalLink, .map + key, conditions, aria), 3 settings/context,
+4 i18n texts, 5 data files, 6 CSS + themes, 7 tests, 8 Vite/TypeScript/lint/deploy workflow.
+**Steps 1–2 done.** He paused it to work on the site. **Don't offer it at session start**; resume at
+step 3 only when he asks. Remove this section once the tour is finished (and log it in `JOURNAL.md`).
 
 ## Working with him
 - He is learning: **explain simply each step** — what you do, why, and what new tools/files are for.

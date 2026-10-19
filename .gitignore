@@ -29,3 +29,6 @@ dist-ssr
 
 # Full-size original photos (too big for the site and the repo; src/assets/photo.jpg is the web copy)
 src/assets/DSC_*
+
+# Original screenshots dropped at the project root (the site uses small copies in src/assets/projects/)
+/*.png

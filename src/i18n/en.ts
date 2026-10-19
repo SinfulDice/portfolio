@@ -63,6 +63,11 @@ export const en: Translations = {
     demo: 'View demo',
     techLabel: 'Technologies',
     items: {
+      rockPaperScissors: {
+        title: 'Rock-Paper-Scissors AI',
+        description:
+          'Play rock-paper-scissors against the computer by showing your hand to the webcam. I recorded my own data (660 samples) and trained a small neural network in Python (PyTorch) that recognizes the sign with 99.2% accuracy on test data. The model runs right in the browser: the video never leaves your computer. Built with the help of Claude Code. Limit: trained on my hand only, for now. Demo on desktop (Chrome or Firefox), with a webcam.',
+      },
       portfolio: {
         title: 'This portfolio',
         description:
